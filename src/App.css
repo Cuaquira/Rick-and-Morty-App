@@ -1,20 +1,83 @@
+.App {
+    background: #05292E;
+    color: white;
+}
 
+.img-fondo{
+    width: 100%;
+}
 
-.location_card{
+.location_name {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.location_card {
     position: absolute;
     width: 890px;
     height: 126px;
     left: 275px;
-    top: 404px;
+    top: 460px;
     display: flex;
     justify-content: space-around;
     font-size: 30px;
     background: #062226;
     color: white;
+    border-radius: 10px;
 }
 
-.card_date{
+.card_date {
     position: relative;
     top: 20px;
+}
 
+.input {
+    position: relative;
+    top: 170px;
+    text-align: center;
+}
+
+.input_data {
+    height: 40px;
+    width: 400px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn {
+    width: 100px;
+    height: 30px;
+    margin: 1rem;
+    border-radius: 5px;
+}
+
+/* Card */
+.container_card {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15rem;
+    margin-left: 8%;
+}
+
+.card_info {
+    margin: 1.5rem;
+    margin-top: 0.5rem;
+    padding: 2rem;
+    background: #062226;
+    border-radius: 10px;
+}
+
+#miid::placeholder {
+    color: red;
+    text-align: center;
+}
+.title_info{
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+.img{
+    border-radius: 10px;
+    margin-bottom: 00.5rem;
 }

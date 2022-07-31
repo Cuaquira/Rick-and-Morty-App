@@ -26,9 +26,9 @@ const Location = () => {
 
 
     return (
-        <div className='card_info'>
-            <figure>
-                <img src={IMG} alt="" />
+        <div className='c'>
+            <figure >
+                <img className='img-fondo' src={IMG} alt="fondo" />
             </figure>
             <h2 className='location_name'>{location.name}</h2>
             <section className='location_card'>
@@ -37,22 +37,25 @@ const Location = () => {
                 <p className='card_date'><b>Dimension: <br /></b>{location.dimension}</p>
                 <p className='card_date'><b>Population: <br /></b>{location.residents?.length}</p>
             </section>
-            <div>
+            <div className='input'>
                 <input
+                    className='input_data'
                     type="text"
                     value={search}
                     onChange={ e => setSearch(e.target.value)}
-                    placeholder="id"
+                    placeholder="search id"
+                    id='miid'
                 />
-                <button onClick={SearchId}>submit</button>
+                <br />
+                <button className='btn' onClick={SearchId}>Search</button>
             </div>
-            <ul>
+            <div className='container_card'>
                 {
                     location.residents?.map((resident) => (
                         <ResidentInfo residentUrl={resident} key={resident} />
                     ))
                 }
-            </ul>
+            </div>
         </div>
     );
 };

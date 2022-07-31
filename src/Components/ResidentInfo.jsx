@@ -14,9 +14,9 @@ const ResidentInfo = ( {residentUrl}) => {
 
     return (
         <div className='Card'>
-            <h2>{residents.name}</h2>
-            <img src={residents.image} alt="" />
             <section className='card_info'>
+            <h2 className='title_info'>{residents.name}</h2>
+            <img className='img' src={residents.image} alt="" />
                 <p><b>Status: </b>{residents.status}</p>
                 <p><b>Origin: </b>{residents.origin?.name}</p>
                 <p><b>Episode: </b>{residents.episode?.length}</p>
