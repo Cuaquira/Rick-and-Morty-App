@@ -23,6 +23,18 @@ const Location = () => {
             .get(`https://rickandmortyapi.com/api/location/${search}`)
             .then(res => setLocation(res.data))
     }
+        const [page, setPage] = useState(1);
+        const lastIndex =  page * 20
+        const firstIndex = lastIndex - 20;
+        const paginatedCharacter = location.residents?.slice(firstIndex, lastIndex);
+
+        const LastPage = Math.ceil(location.residents?.length / 20)
+
+        const numbers = []
+
+        for (let i = 1; i <= LastPage; i++) {
+            numbers.push(i)  
+        }
 
 
     return (
@@ -51,11 +63,18 @@ const Location = () => {
             </div>
             <div className='container_card'>
                 {
-                    location.residents?.map((resident) => (
+                    paginatedCharacter?.map((resident) => (
                         <ResidentInfo residentUrl={resident} key={resident} />
                     ))
                 }
             </div>
+            <button onClick={() => setPage(page - 1)} disabled={page === 1}>Prev page</button>
+            {
+                numbers.map( number => (
+                    <button onClick={() => setPage(number)}>{number}</button>
+                ))
+            }
+            <button onClick={ () => setPage(page + 1)} disabled={ page === LastPage }>Next page</button>
         </div>
     );
 };
