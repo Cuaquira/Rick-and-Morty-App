@@ -1,0 +1,20 @@
+
+
+.location_card{
+    position: absolute;
+    width: 890px;
+    height: 126px;
+    left: 275px;
+    top: 404px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    background: #062226;
+    color: white;
+}
+
+.card_date{
+    position: relative;
+    top: 20px;
+
+}
