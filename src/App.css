@@ -81,3 +81,32 @@
     border-radius: 10px;
     margin-bottom: 00.5rem;
 }
+
+/* button page */
+
+.button-page{
+    text-align: center;
+}
+
+.number-button{
+    height: 30px;
+    width: 30px;;
+    border-radius: 5px;
+    border-color: aliceblue;
+}
+.fa-solid.fa-forward{
+    width: 30px;
+    height: 10px;
+    color: #062226;
+}
+.fa-solid.fa-backward{
+    width: 30px;
+    height: 10px;
+    color: #062226; 
+}
+.fa-solid.fa-backward:hover{
+    color: white;
+}
+.fa-solid.fa-forward:hover{
+    color: white;
+}

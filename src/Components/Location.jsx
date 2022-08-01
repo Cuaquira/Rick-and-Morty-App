@@ -68,13 +68,17 @@ const Location = () => {
                     ))
                 }
             </div>
-            <button onClick={() => setPage(page - 1)} disabled={page === 1}>Prev page</button>
+
+            <div className='button-page'>
+            <button onClick={() => setPage(page - 1)} disabled={page === 1}><i className="fa-solid fa-backward"></i></button>
             {
                 numbers.map( number => (
-                    <button onClick={() => setPage(number)}>{number}</button>
+                    <button className='number-button' onClick={() => setPage(number)}>{number}</button>
                 ))
             }
-            <button onClick={ () => setPage(page + 1)} disabled={ page === LastPage }>Next page</button>
+            <button onClick={ () => setPage(page + 1)} disabled={ page === LastPage }><i className="fa-solid fa-forward"></i></button>
+            </div>
+            
         </div>
     );
 };
